@@ -28,7 +28,7 @@ class EditNameDialogFragment : DialogFragment(), TextView.OnEditorActionListener
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         try {
-            listener = targetFragment as EditNameDialogListener
+            listener = parentFragment as EditNameDialogListener
         } catch (e: ClassCastException) {
             throw ClassCastException(context.toString() + "must implement EditNameDialogListener")
         }

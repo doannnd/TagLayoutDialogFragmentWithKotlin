@@ -32,8 +32,8 @@ class LoginFragment : Fragment(), EditNameDialogFragment.EditNameDialogListener 
         show_dialog_button.setOnClickListener {
             val dialogTitle = activity!!.getString(R.string.dialog_title)
             val editNameDialogFragment = EditNameDialogFragment.newInstance(dialogTitle)
-            editNameDialogFragment.setTargetFragment(this@LoginFragment, LOGIN_FRAGMENT_REQUEST_CODE)
-            editNameDialogFragment.show(fragmentManager, EDIT_NAME_DIALOG_TAG)
+//            editNameDialogFragment.setTargetFragment(this@LoginFragment, LOGIN_FRAGMENT_REQUEST_CODE)
+            editNameDialogFragment.show(childFragmentManager, editNameDialogFragment.tag)
         }
     }
 
